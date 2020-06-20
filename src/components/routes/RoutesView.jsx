@@ -1,6 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { Login, Signup, AllRecipesContainer } from "../containers";
+import {
+  Login,
+  Signup,
+  AllRecipesContainer,
+  HomeContainer,
+} from "../containers";
 
 const RoutesView = (props) => {
   const { isLoggedIn } = props;
@@ -8,6 +13,9 @@ const RoutesView = (props) => {
   return (
     <Switch>
       {/* Routes placed within this section are available to all visitors */}
+      <Route exact path="/" component={HomeContainer} />
+      <Route exact path="/home" component={HomeContainer} />
+      <Route exact path="/recipes" component={AllRecipesContainer} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/signup" component={Signup} />
 
@@ -15,7 +23,7 @@ const RoutesView = (props) => {
         <Switch>
           {/* Routes placed within this section are only available after
           logging in */}
-          {<Route exact path="/recipes" component={AllRecipesContainer} />}
+          {/* {<Route exact path="/recipes" component={AllRecipesContainer} />} */}
         </Switch>
       )}
 

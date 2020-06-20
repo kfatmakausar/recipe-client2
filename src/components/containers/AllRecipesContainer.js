@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchAllRecipesThunk } from "../../thunks";
+import { AllRecipesView } from "../views";
 
 //THE ALLRECIPES IS BASICALLY THE SEARCHBAR, SEARCH FOR RECIPES USING SEARCH TERM
 
@@ -9,8 +10,11 @@ class AllRecipesContainer extends Component {
     this.props.fetchAllRecipes();
   }
   render() {
-    console.log(this.props.allRecipes);
-    return <h1>AllRecipesContainer</h1>;
+    //console.log(this.props.allRecipes);
+    return (
+      <h1>Hello AllRecipesContainer</h1>
+      // <AllRecipesView allRecipes={this.props.allRecipes} />
+    );
   }
 }
 
