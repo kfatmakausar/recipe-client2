@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchAllBookmarksThunk } from "../../thunks";
+import { AllBookmarksView } from "../views";
 
 class AllBookmarksContainer extends Component {
   componentDidMount() {
     this.props.fetchAllBookmarks();
   }
   render() {
-    return <h1>Hello AllBookmarksContainer</h1>;
+    return (
+      // <h1>Hello AllBookmarksContainer</h1>;
+      <AllBookmarksView allBookmarks={this.props.allBookmarks} />
+    );
   }
 }
 
