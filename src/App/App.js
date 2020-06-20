@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import RoutesContainer from "./components/routes/RoutesContainer";
+import RoutesContainer from "../components/routes/RoutesContainer";
 
 function App() {
   return (
