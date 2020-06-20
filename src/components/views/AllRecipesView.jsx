@@ -8,14 +8,17 @@ const AllRecipesView = (props) => {
         <button onClick={handleLogout}>Logout</button>
       </h1>
       {props.recipes.map((recipe) => (
-        <div key={props.recipe.id}>
-          <h3>{props.recipe.title}</h3>
+        <div key={recipe.id}>
+          <h3>{recipe.title}</h3>
           <ul>
-            <li>ReadyInMinutes: {props.recipe.readyInMinutes}</li>
-            <li>Servings: {props.recipe.servings}</li>
-            <li>Recipe Link: {props.recipe.sourceURL}</li>
+            <li>ReadyInMinutes: {recipe.readyInMinutes}</li>
+            <li>Servings: {recipe.servings}</li>
             <li>
-              img src={props.recipe.image} style=
+              <a>Recipe Link: {recipe.sourceUrl}</a>
+            </li>
+            <li>
+              img src={recipe.image}
+              {/* style=
               {{
                 width: "300px",
                 height: "300px",
@@ -23,7 +26,7 @@ const AllRecipesView = (props) => {
                 display: "block",
                 boxShadow: "0 10px 10px rgba(0,0,0,.7)",
                 padding: "5px",
-              }}
+              }} */}
             </li>
           </ul>
           <br></br>
