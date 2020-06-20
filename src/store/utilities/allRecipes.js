@@ -29,32 +29,6 @@ export const fetchAllRecipesThunk = (searchTerm) => (dispatch) => {
     .catch((err) => console.log(err));
 };
 
-// .then((res) => res.data)
-//     .then((data) => console.log(data.results))
-//     .catch((err) => console.log(err));
-
-// searchTerm = "cheese",
-//   number = 5,
-//   includeNutrition = true
-// ) => (dispatch) => {
-//   return (
-//     axios
-//       .get(
-//         `https://api.spoonacular.com/recipes/search?query=${searchTerm}&number=${number}&apiKey=${API_KEY}&includeNutrition=${includeNutrition}`
-//       )
-//       //    .get(RECIPE_API_BASE, {
-//       //    query: {
-//       //    apiKey: API_KEY,
-//       //  query: searchTerm,
-//       //   includeNutrition,
-//       //  },
-//       //  })
-//       .then((response) => response.data.results)
-//       .then((recipes) => dispatch(fetchAllRecipes(recipes)))
-//       .catch((err) => console.log(err))
-//   );
-// };
-
 //reducer
 const reducer = (state = [], action) => {
   switch (action.type) {
