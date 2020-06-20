@@ -10,11 +10,8 @@ class AllRecipesContainer extends Component {
     this.props.fetchAllRecipes();
   }
   render() {
-    //console.log(this.props.allRecipes);
-    return (
-      <h1>Hello AllRecipesContainer</h1>
-      // <AllRecipesView allRecipes={this.props.allRecipes} />
-    );
+    console.log(this.props.allRecipes);
+    return <AllRecipesView recipes={this.props.allRecipes} />;
   }
 }
 

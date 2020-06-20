@@ -19,6 +19,9 @@ const NavBarView = (props) => {
         <Link to="/recipes">
           <l1>Recipes</l1>
         </Link>
+        <Link to="/reviews">
+          <l1>Reviews</l1>
+        </Link>
       </ul>
     </nav>
   );
