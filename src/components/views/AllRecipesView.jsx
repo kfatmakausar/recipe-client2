@@ -14,7 +14,7 @@ const AllRecipesView = (props) => {
             <li>ReadyInMinutes: {recipe.readyInMinutes}</li>
             <li>Servings: {recipe.servings}</li>
             <li>Recipe Link: {recipe.sourceURL}</li>
-            <li>{recipe.image}</li>
+            <li>img src={recipe.image}</li>
           </ul>
         </div>
       ))}

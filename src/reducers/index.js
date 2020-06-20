@@ -3,3 +3,4 @@
 export { default as user } from "../store/utilities/user";
 export { default as allBookmarks } from "../store/utilities/allBookmarks";
 export { default as allRecipes } from "../store/utilities/allRecipes";
+export { default as allReviews } from "../store/utilities/allReviews";
