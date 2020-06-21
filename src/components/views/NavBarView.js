@@ -10,6 +10,9 @@ const NavBarView = (props) => {
         <Link to="/home">
           <l1>Home</l1>
         </Link>
+        <Link to="/profile">
+          <l1>User Profile</l1>
+        </Link>
         <Link to="/login">
           <l1>Login</l1>
         </Link>
