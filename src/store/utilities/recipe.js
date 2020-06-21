@@ -2,37 +2,37 @@
 import axios from "axios";
 
 //ACTION TYPES
-const FETCH_ALL_RECIPES = "FETCH_ALL_RECIPES";
+const FETCH_RECIPE = "FETCH_RECIPE";
 
 //ACTION CREATOR
-const fetchAllRecipes = (recipes) => {
+const fetchRecipe = (recipe) => {
   return {
-    type: FETCH_ALL_RECIPES,
-    payload: recipes,
+    type: FETCH_RECIPE,
+    payload: recipe,
   };
 };
 
 const API_KEY = process.env.REACT_APP_SPOONACULAR_API;
 const RECIPE_API_BASE = "https://api.spoonacular.com/recipes/search";
+// https://api.spoonacular.com/recipes/716429/information?apiKey=8c1e6e74f9eb44f6b8f43b81ef41f597
 
 //THUNK CREATORS
-export const fetchAllRecipesThunk = (searchTerm) => (dispatch) => {
+export const fetchRecipeThunk = (id) => (dispatch) => {
   return axios
-    .get(RECIPE_API_BASE, {
+    .get("https://api.spoonacular.com/recipes/${id}/information", {
       params: {
-        query: searchTerm,
         apiKey: "8c1e6e74f9eb44f6b8f43b81ef41f597",
       },
     })
     .then((response) => response.data.results)
-    .then((recipes) => dispatch(fetchAllRecipes(recipes)))
+    .then((recipe) => dispatch(fetchRecipe(recipe)))
     .catch((err) => console.log(err));
 };
 
 //reducer
 const reducer = (state = [], action) => {
   switch (action.type) {
-    case FETCH_ALL_RECIPES:
+    case FETCH_RECIPE:
       return action.payload;
     default:
       return state;

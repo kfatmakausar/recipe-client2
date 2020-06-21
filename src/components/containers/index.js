@@ -1,7 +1,10 @@
 // Barrel file for container components;
-export { Login, Signup } from "./AuthFormContainer";
+export { Login, Signup, Logout } from "./AuthFormContainer";
 export { default as AllRecipesContainer } from "./AllRecipesContainer";
 export { default as AllBookmarksContainer } from "./AllBookmarksContainer";
 export { default as AllReviewsContainer } from "./AllReviewsContainer";
 export { default as HomeContainer } from "./HomeContainer";
 export { default as UserProfile } from "./UserProfile";
+export { default as NavBarContainer } from "./NavBarContainer";
+export { default as SingleRecipeContainer } from "./SingleRecipeContainer";
+export { default as RecipeContainer } from "./RecipeContainer";

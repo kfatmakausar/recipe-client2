@@ -4,6 +4,7 @@ import {
   HomeContainer,
   Login,
   Signup,
+  Logout,
   AllRecipesContainer,
   AllReviewsContainer,
   UserProfile,
@@ -22,6 +23,7 @@ const RoutesView = (props) => {
       <Route exact path="/signup" component={Signup} />
       <Route exact path="/reviews" component={AllReviewsContainer} />
       <Route exact path="/profile" component={UserProfile} />
+      <Route exact path="/logout" component={Logout} />
 
       {isLoggedIn && (
         <Switch>

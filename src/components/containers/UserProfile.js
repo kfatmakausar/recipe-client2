@@ -9,16 +9,21 @@ class UserProfile extends Component {
     this.state = {
       email: "",
       password: "",
+      lastName: "",
+      firstName: "",
     };
   }
   componentDidMount() {
     this.props.me();
+    console.log(this.props.firstName);
   }
 
   render() {
     return (
-      <div>
-        <h1>email {this.props.email}</h1>
+      <div className="profile-page-view">
+        <h2>
+          Name: {this.props.firstName} {this.props.lastName}
+        </h2>
       </div>
     );
   }
@@ -28,7 +33,11 @@ UserProfile.propTypes = {};
 
 const mapUser = (state) => {
   return {
-    email: state.user.email,
+    name: "user",
+    displayName: "User",
+    error: state.user.error,
+    firstName: state.user.firstName,
+    lastName: state.user.lastName,
     isLoggedIn: !!state.user.id,
   };
 };
